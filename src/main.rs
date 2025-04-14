@@ -21,12 +21,16 @@ async fn main(_spawner: Spawner) {
     let mut led = Output::new(p.PA5, Level::High, Speed::Low);
     let mut blue_button = ExtiInput::new(p.PC13, p.EXTI13, Pull::Up);
 
+    info!("Hello, World!");
+    led.set_low();
+
     loop {
-        info!("Hello, World!");
         blue_button.wait_for_any_edge().await;
         if blue_button.is_low() {
+            info!("Light on!");
             led.set_high();
         } else {
+            info!("Light off!");
             led.set_low();
         }
     }
