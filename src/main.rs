@@ -21,9 +21,10 @@ use embassy_stm32::{
 use fmt::info;
 
 const STTS22H_ADDR: u8 = 0x70 >> 1; // Convert to a 7-bit address.
-                                    // const STTS22H_REG_WHOAMI: u8 = 0x01;
-                                    // const STTS22H_REG_TEMP_H_LIMIT: u8 = 0x02;
-                                    // const STTS22H_REG_TEMP_L_LIMIT: u8 = 0x03;
+
+// const STTS22H_REG_WHOAMI: u8 = 0x01;
+// const STTS22H_REG_TEMP_H_LIMIT: u8 = 0x02;
+// const STTS22H_REG_TEMP_L_LIMIT: u8 = 0x03;
 const STTS22H_REG_CTRL: u8 = 0x04;
 // const STTS22H_REG_STATUS: u8 = 0x05;
 const STTS22H_REG_TEMP_L_OUT: u8 = 0x06;
